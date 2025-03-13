@@ -37,3 +37,36 @@ Forcefully pushes the main branch to origin and sets it as the upstream branch.
 
 git push -u origin HEAD:main
 Pushes the current branch (HEAD) to the remote main branch, setting it as the upstream.
+
+Example Usage:
+Let's assume you are initializing a new Git repository and pushing your code to GitHub:
+
+# Step 1: Initialize a Git repository (if not initialized)
+git init
+ 
+# Step 2: Add all files to staging
+git add .
+ 
+# Step 3: Commit the changes
+git commit -m "Initial commit"
+ 
+# Step 4: Connect the local repo to a remote GitHub repository
+git remote add origin https://github.com/username/repository.git
+ 
+# Step 5: Verify the remote URL
+git remote -v
+ 
+# Step 6: Rename the current branch to 'main'
+git branch -M main
+ 
+# Step 7: Push the 'main' branch to GitHub and set it as upstream
+git push -u origin main
+ 
+# Step 8: Force push (if required, e.g., overwriting history)
+git push origin main --force
+ 
+# Step 9: Pull the latest changes from the remote repository with rebase
+git pull origin main --rebase
+
+
+
