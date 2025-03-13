@@ -1,0 +1,39 @@
+Step-by-Step Git Workflow:
+
+git add .
+Stages all changes (new, modified, and deleted files) in the current directory for the next commit.
+
+git commit -m "Initial commit"
+Commits the staged changes with a message ("Initial commit").
+
+git remote -v
+Displays the list of remote repositories linked to the local repository, along with their URLs.
+
+git branch -M main
+Renames the current branch to main. The -M flag forces the rename, even if the branch already exists.
+
+git push -u origin main
+Pushes the main branch to the remote repository (origin) and sets it as the upstream branch for future pushes/pulls.
+
+git push origin main --force
+Force pushes the main branch, overwriting the remote branch’s history if necessary.
+
+git pull origin main --rebase
+Pulls the latest changes from origin/main and applies them on top of local commits (avoiding unnecessary merge commits).
+
+Additional Git Commands:
+
+git branch
+Lists all branches in the local repository.
+
+git checkout master
+Switches to the master branch (if it exists in the local repo).
+
+git branch -M main
+Renames the current branch to main (similar to step 4).
+
+git push -u origin main --force
+Forcefully pushes the main branch to origin and sets it as the upstream branch.
+
+git push -u origin HEAD:main
+Pushes the current branch (HEAD) to the remote main branch, setting it as the upstream.
